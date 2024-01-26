@@ -95,26 +95,26 @@
       evt.preventDefault();
 
       signInWithEmailAndPassword(auth, email.value, password.value)
-        .then((credentials) => {
-          console.log("Login successful");
-
-          get(child(dbRef, 'UserAuthList/' + credentials.user.uid))
+        .then((userCredentials) => {
+          get(child(dbRef, 'UserAuthList/' + userCredentials.user.uid))
             .then((snapshot) => {
-              if (snapshot.exists()) {
+              if (snapshot.exists) {
                 console.log(snapshot.val());
-                const userFullname = snapshot.val().fullname;
-
                 sessionStorage.setItem('user-info', JSON.stringify({
-                  fullname: userFullname
+                  firstName: snapshot.val().firstName,
+                  lastName: snapshot.val().lastName
                 }));
 
-                sessionStorage.setItem('user-creds', JSON.stringify(credentials.user));
-                window.location.href = "./index.html";
+                sessionStorage.setItem('user-creds', JSON.stringify(userCredentials.user));
+                console.log("going to login")
               }
             })
-            .catch((err) => {
-              console.log("Error fetching user data:", err.message);
-            });
+            
+            //const user = userCredentials.user;
+            console.log("user ===>", userCredentials);
+            console.log("login successful");
+            window.location.href = '../index.html';
+          
         })
         .catch((err) => {
           alert(err.message);

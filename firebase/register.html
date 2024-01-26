@@ -151,16 +151,16 @@
         evt.preventDefault();
 
         createUserWithEmailAndPassword(auth, email.value, password.value)
-          .then((credentials) => {
+          .then((userCredentials) => {
             console.log("Registration successful");
             // Capture fullname correctly and store in the database
             let userFullname = fullname.value;
-            set(ref(db, "UsersAuthList/" + credentials.user.uid), {
+            set(ref(db, "UsersAuthList/" + userCredentials.user.uid), {
               fullname: userFullname,
             });
 
             // Redirect to home.html
-            window.location.href = "home.html";
+            window.location.href = "login.html";
           })
           .catch((err) => {
             alert(err.message);
