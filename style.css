@@ -177,7 +177,7 @@ html::-webkit-scrollbar-thumb{
         display: inline-block;
     }
 }
-/*login form*/
+/*login form
 .login-form-container{
     display: flex;
     align-items: center;
@@ -238,7 +238,7 @@ html::-webkit-scrollbar-thumb{
     text-align: center;
     width: 100%;
     margin: 1.5rem 0;
-}
+}*/
 .btn{
     margin-top: 1rem;
     display: inline-block;
@@ -254,7 +254,7 @@ html::-webkit-scrollbar-thumb{
 .btn:hover{
     background: var(--dark-color);
 }
-.login-form-container form p{
+/*.login-form-container form p{
     padding-top: 0.8rem;
     color: var(--light-color);
     font-size: 1.5rem;
@@ -269,7 +269,7 @@ html::-webkit-scrollbar-thumb{
     right: 2.5rem;
     font-size: 5rem;
     cursor: pointer;
-}
+}*/
 
 /*home sec start*/
 section{
