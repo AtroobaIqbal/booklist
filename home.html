@@ -17,16 +17,16 @@
     <header class="header">
         <div class="header_one">
             <a href="" class="logo"><i class="fas fa-book"> Bibliophile</i></a>
-          <!--  <form action="" class="search-form">
+           <!-- <form action="" class="search-form">
                 <input type="search" id="search-box" placeholder="search here">
                 <label for="" class="fas fa-search"></label>
             </form>-->
             <div class="icons">
-              <!--  <div id="search-btn" class="fas fa-search"></div>-->
-                <a href="addbooks.html" class="fas fa-plus"></a>
+               <!-- <div id="search-btn" class="fas fa-search"></div>-->
+               <a href="addbooks.html" class="fas fa-plus"></a>
                 <a href="" class="fas fa-heart"></a>
                 <a href="" class="fas fa-shopping-cart"></a>
-                <a href="firebase/register.html"><div id="login-btn" class="fas fa-user"></div></a>
+                <a href="index.html"><div id="login-btn" class="fas fa-sign-out"></div></a>
             </div>
         </div>
 
@@ -78,7 +78,7 @@
                  literary palate. Immerse yourself in the enchanting aroma of printed pages and embark on a journey through the
                  boundless realms of imagination within these walls.
                 </p>
-                <a href="firebase/register.html" class="btn">Add your books</a>
+                <a href="addbooks.html" class="btn">Add your books</a>
             </div>
             <div class="swiper books-list">
                 <div class="swiper-wrapper">
@@ -631,14 +631,29 @@
         <div class="credit">
             created by <span>Atrooba Iqbal</span> | all rights reserved.
         </div>
-    </section>
+    </section>-->
 
 
 
 
 
 
-
+    <!--firebase cdn-->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-analytics.js";
+        const firebaseConfig = {
+          apiKey: "AIzaSyA5UpEpEfaMmlY9Ar_NSw-ZwADB_ZTNcnQ",
+          authDomain: "book-list-app-a180b.firebaseapp.com",
+          projectId: "book-list-app-a180b",
+          storageBucket: "book-list-app-a180b.appspot.com",
+          messagingSenderId: "815320865513",
+          appId: "1:815320865513:web:273e8c693737ca97032e78",
+          measurementId: "G-W2TKP2XHY8"
+        };
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
     <!--swiper cdn link-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!--js file link-->

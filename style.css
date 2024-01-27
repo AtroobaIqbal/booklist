@@ -281,7 +281,7 @@ section{
     }
 }
 .home{
-    background: url(banner.jpg);
+    background: url(images/banner.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -444,7 +444,7 @@ section{
 
 /*   new letter   */
 .newletter{
-    background: url(newsbg.jpg);
+    background: url(images/newsbg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
