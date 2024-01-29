@@ -21,7 +21,7 @@ document.querySelector("#close-login-btn").onclick = () => {
 
 //     home section
 
-/*var swipper= new Swiper('.books-list' , {
+var swipper= new Swiper('.books-list' , {
     loop: true,
     centeredSlides: true,
     autoplay: {
